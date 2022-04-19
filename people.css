@@ -6,12 +6,13 @@ body{
   .navbar{
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 999;
       height:4rem;
       max-height: 10%;
       width: 100%;
       clear:both;
       background-color: #f0f0f0;
+      border-bottom: black 2px solid;
   }
   .navbar h1{
       float: left;
@@ -41,18 +42,6 @@ body{
   }
   .navbar-links a:hover{
       color:lightskyblue
-  }
-  
-  .navbar-line {
-      margin: 0px;
-        padding: 0px;
-        border: 1px solid;
-        color: var(--light);
-      margin-top: 1px;
-      margin-bottom: 5px;
-      position: sticky;
-      top: 4.05rem;
-      z-index: 100;
   }
 
 .people-container{
