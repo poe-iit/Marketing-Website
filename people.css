@@ -1,6 +1,7 @@
 body{
     margin-top: 0;
     background-color: #f0f0f0;
+    font-family: 'Ubuntu', sans-serif;
   }
   
   .navbar{
@@ -62,6 +63,12 @@ body{
 .container img{
     height: 100%;
     width: 100%;
+    border-radius: 50%;
+    border: rgb(87, 150, 171) 4px solid;
+}
+
+.container p{
+    font-family: 'Merriweather', serif;
 }
 .row{
     display: flex;
