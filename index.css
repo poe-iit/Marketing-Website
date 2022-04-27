@@ -3,7 +3,6 @@
   font-family: 'Ubuntu', sans-serif;
 }
 a{
-  font-style: italic;
   color: #444;
 }
 body{
@@ -53,6 +52,97 @@ body{
 }
 .navbar-links a:hover{
     color:lightskyblue
+}
+
+.secNavbar {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  background-color: darkgray;
+  overflow-y: hidden;
+  z-index: 1500;
+}
+
+#secNavbarStyle {
+  margin: 0;
+  margin-left: auto;
+  width: 100%;
+}
+
+.secNavbar a {
+  float: left;
+  padding-bottom: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px
+}
+
+.active {
+  background-color: lightskyblue;
+  width: 30px;
+  height: 35px;
+  padding-left: 0.60%;
+  padding-top: 0.3%;
+}
+
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1700; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.3s; 
+  font-family: Ubuntu, sans-serif;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 24px;
+  margin-left: 50px;
+}
+
+.openNav{
+    position: fixed;
+    text-decoration: none;
+    color: #111;
+    justify-content: center;
+
+}
+
+.wiki-container{
+  margin-right: auto;
+  width: 90%;
+  transition: margin-left .5s;
+  margin-left: 100px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.synopsis-container{
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: #111 solid 1px;
 }
 
 /* Slideshow container */
