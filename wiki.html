@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -15,22 +16,26 @@
 <body>
     <nav class="navbar">
         <img src="images/IPro_Logo.png" alt="logo" class="navbarlogo">
-        <h1 class="title">Breath Easy Emergency Altert Systems</h1>
-        <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="wiki.html">Wiki</a></li>
-            <li><a href="people.html">People</a></li>
-        </ul>
+        <h1 class="title">Breath Easy Emergency Alert Systems</h1>
     </nav>
     
+    <div class="secNavbar" id = 'secNavbarStyle'>
+        <a class="active" href="javascript:void(0)" class="openNav" onclick="openNav()">&#9776;</a>
+        <ul class="navbar-links">
+        <li><a title = "Home" href="index.html"><i class="fa fa-fw fa-home"></i></a></li>
+        <li><a title = "About POE" href="wiki.html"><i class="fa fa-book"></i></a></li>
+        <li><a title = "POE Team Spring 2022" href="people.html"><i class="fa fa-fw fa-user"></i></a></li>
+    </ul>
+</div>
+    
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#wiki-container">Hardware Devices Wiki</a>
         <a href="#synopsis-container">Synopsis</a>
         <a href="#vr-demo">Game Demo</a>
         <a href="#hardware-demo">Hardware Demo</a>
     </div>
-    <a href="javascript:void(0)" class="openNav" onclick="openNav()">Menu</a>
+ 
 
     <div id="wiki-container" class="wiki-container">
         <h1>Network Infrastructure Devices </h1>
@@ -112,6 +117,7 @@
     
     <div class="footer">
         <p>IIT IPRO 497</p>
-        </div>   
+        </div>  
+        <!---->
 </body>
 </html>

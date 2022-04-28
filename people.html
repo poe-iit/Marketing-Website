@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People</title>
     <link rel="stylesheet" href="people.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="people.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <img src="images/IPro_Logo.png" alt="logo" class="navbarlogo">
-        <h1 class="title">Breath Easy Emergency Altert Systems</h1>
-        <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="wiki.html">Wiki</a></li>
-            <li><a href="people.html">People</a></li>
-        </ul>
+        <h1 class="title">Breath Easy Emergency Alert Systems</h1>
     </nav>
+
+    <div class="secNavbar" id = 'secNavbarStyle'>
+        <a class="active" href="javascript:void(0)" class="openNav" onclick="openNav()">&#9776;</a>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <li><a title = "Home" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+    <li><a title = "About POE" href="wiki.html"><i class="fa fa-book"></i> About POE</a></li>
+    <li><a title = "POE Team Spring 2022" href="people.html"><i class="fa fa-fw fa-user"></i>Our Team</a></li>
+</div>
+
+<!---->
 <div class="people-container">
     <section>
         <h1 class="people-category">Professor</h1>
@@ -161,5 +170,6 @@
 <div class="footer">
     <p>IIT IPRO 497</p>
     </div>
+    <br>
 </body>
 </html>
