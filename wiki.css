@@ -120,6 +120,41 @@ body{
     width: 85%;
     margin: auto;
 }
+.node-communication h1{
+  text-align: center;
+}
+.node-communication{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.vr-demo h1{
+  text-align: center;
+}
+.hardware-demo h1{
+  text-align:center;
+}
+.demo_images{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.demo_images img{
+  height: 90%;
+  margin: 10px;
+  border-radius: 10px;
+}
+.ipro-demo-video{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  align-self: center;
+}
 .footer{
   margin-top: 100px;
   width: 100%;
@@ -127,3 +162,4 @@ body{
   font-size: 10pt;
   text-align: center;
 }
+
