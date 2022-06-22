@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soteria</title>
     <link rel="stylesheet" href="home.css">
-    <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -33,5 +32,13 @@
             safety infrastructure already installed, but not replace it.<br><br>
         </p>
     </div>
+    <script>
+        let ocean = document.getElementById('ocean');
+
+        window.addEventListener('scroll',function(){
+            let v = window.scrollY;
+            ocean.style.top = v + 'px';
+        })
+    </script>
 </body>
 </html>
