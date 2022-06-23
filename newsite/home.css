@@ -109,3 +109,26 @@ section img
     text-align: right;
     color: #fff;
 }
+/* .info_card
+{
+    display: flex;
+    position: relative;
+    padding: 100px;
+}
+.info_card h2
+{
+    padding-top: 7.5%;
+    flex: 1;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+.info_card p
+{
+    width: 55%;
+    margin-right: 30px;
+    font-size: 1.55em;
+    text-align: right;
+    color: #fff;
+} */
