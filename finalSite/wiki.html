@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wiki.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="wiki.js"></script>
+    <title>Wiki</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/IPro_Logo.png" alt="logo" class="navbarlogo">
+        <h1 class="title">Breath Easy Emergency Altert Systems</h1>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="people.html">People</a></li>
+        </ul>
+    </nav>
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+        <a href="#wiki-container">Hardware Devices Wiki</a>
+        <a href="#synopsis-container">Synopsis</a>
+        <a href="#vr-demo">Game Demo</a>
+        <a href="#hardware-demo">Hardware Demo</a>
+    </div>
+    <a href="javascript:void(0)" class="openNav" onclick="openNav()">Menu</a>
+
+    <div id="wiki-container" class="wiki-container">
+        <h1>Network Infrastructure Devices </h1>
+            <p>
+                These devices are the prerequisite devices to enable the PoE system. They create a network so that the Network Client Devices can communicate 
+                with each other to manage the Hardware Devices. 
+            </p>
+        <h1>Cisco Switch</h1>
+            <p>
+                This device serves as a PoE injector, supplying any attached PoE capable devices with both power and data connection. Note that this is a switch, 
+                not a router: the switch does not deal in the realm of "IP addresses," meaning if the connected devices need to be connected to the internet, a router 
+                must be used (i.e. the Asus Router below). 
+            </p>
+        <h1>Asus Router</h1>
+            <p>This is a typical consumer wireless router, which is connected to the internet via a wired Ethernet cable. Next, one of its ports is connected to the Cisco 
+                switch in order to let every device that the switch is connected to have access to the internet. 
+                The router is wireless, so personal computers can be connected to the same network as PoE devices without a wired connection. This is useful for using SSH to 
+                configure any of the various Raspberry Pis found in the system. 
+            </p>
+        <h1>Raspberry Pi 4 Model B</h1>
+            <p>We currently are using just one Raspberry Pi microcomputer to power our demo, however in a larger scale implementation, we could use a variety of cheaper microcontrollers that don't
+                have all the advanced features of the Pi that we don't really need. 
+            </p>
+        <h1>RGB LED Strips </h1>
+        <p>Individually addressable 5v RGB LEDs are used to light up the prototype to demonstrate the emergency lighting system. Each LED can be independently controlled via a single control line
+            that is driven by the Raspberry Pi. The LEDs are controlled with Adafruit's CircuitPython NeoPixel library, streamlining the process of controlling the lights.It is 
+            important to note that the Pi required a 3 to 5 volt level shifter to amplify the signal to a level that the LED strip needs. 
+        </p>
+        <h1>3v to 5v Level Shifter</h1>
+            <p>As mentioned, a 3 to 5 volt level shifter is needed to amplify the signal produced by the Raspberry Pi to be strong enough for the LED strip to be controlled properly.</p>
+        <h1>MQ-2 Combustible gas sensor</h1>
+            <p>The MQ-2 Semiconductor sensor can detect smoke, alcohol, propane, hydrogen, methane, and carbon monoxide. It operates by essentially changing its resistance (qualitative measurement) 
+            when its sensing material interacts with certain gasses. 
+            </p>
+        <h1>MCP3008 Analog-digital converter</h1>
+        <p>
+            This integrated circuit converts the analog signal from the MQ-2 smoke into digital signals that can be read by the raspberry pi, as it does not have an ADC built in. 
+        </p>
+        <h1>Power over Ethernet Splitters </h1>
+        <p>These splitters take a PoE enabled cable at it’s input and splits into two outputs; a male RJ45 (ethernet) connector as its first output, and either a 5v MicroUSB or 5v Barrel connector as its second power output. This 5V from the Barrel
+            The MicroUSB variety are used for power devices like the Raspberry Pis, while the barrel output is used alongside the DC power jack adapters to provide a power terminal for less sophisticated components. 
+        </p>
+        
+        <div id="synopsis-container" class="synopsis-container">
+            <h1 class="synopsis-title">POE Smart Alarm System Synopsis:</h1>
+            <p class="summary">Our idea is building off previous semester’s POE lighting system. Power over Ethernet is a technology that allows for power to be transmitted over ethernet (CAT5/CAT6) cables. The cables can transmit data as well as provide between 44-57 volts (typically 48 volts) and up to about ~15 Watts of power. Having power and data communication enabled between devices with one cable is clearly very powerful and convenient. POE lights also are more efficient, and can be controlled in more interesting ways when connected to each other and sensors in the building, like motion sensors and timers. These allow the lights to become “smart” and even more energy efficient (turning off when no motion in a room for 30 mins, etc). 
+                <br><br> The previous IPRO teams used Hubbell PowerHUBB nodes that are essentially POE powered devices that can intelligently control overhead ceiling lights using POE. The devices are wired to the overhead lighting fixtures, and then each device is connected to a POE network switch, providing them power, and connecting a router to the switch allows all the devices to communicate with the Hubbell Gateway software running on a mini PC. The Gateway software allows user to set custom parameters, like scheduling lights to turn off after a certain time, configuring motions sensors to trigger certain lights, and even things like connecting Alexa or Google assistant to control the lights with your voice. (Only working demo we know of is in the Smart Tech lab room, so we just sort of talk about it theoretically)
+                <br><br> System of nodes that communicate with each other to control lights and collect sensor data about conditions (i.e. smoke concentrations)
+                <br><br> RGB LED strips along the floor provide people with information about the threat and can even be used to guide people to safety. The LED strips we use have 30 LEDs/meter, with an average power for each LED at approx. 60mA at 5V, so we are using around 2A at 5V per meter which is around 9.5 watts max; however the lights typically only draw around 1/3-1/2 of this max value, and we don’t use them at max brightness. Factoring this, we estimate we could drive 60 LEDs with one POE cable, if we assume the cable can provide up to ~15 watts of power. Theoretically, if we implemented this IRL @ scale, we’d want to reduce the concentration of lights to something like 10 LEDs per meter. This would allow us to line a 6 meter hallway on both sides with two POE cables, which we think is reasonably easy to manage.
+                <br><br> The LED strips are driven by a Raspberry Pi. Theoretically, any microcontroller could work to drive the LEDs (such as Arduino), we just chose the Pi because there was already some in the lab room. The microcontroller is also connected to a handful of MQ-2 combustible gas sensors. This data could theoretically be collected and sent somewhere for storage or use. 
+                <br><br> We think that using sensor data from nodes all over inside of a building we could guide people away from threats by using some kind of path finding algorithm that will light up a green path along the floor. 
+                <br><br> A lot of our time was spent trying to figure out what the previous semesters had done, and slowly finding out it was not all very useful. We also spent a lot of time trying to connect to and configure the extra powerHubb nodes we found, but to no avail. Eventually, we decided to move forward with the idea we are now presenting. Due to challenges related to our class being all online and then some of us deciding partway through the semester to try and make some kind of physical demonstration, and lots of pivoting and catching-up early on, we didn’t have time to fully implement all of our ideas, but we hope that future continuations of this class can more easily move forward what we have done.  
+            </p>
+        </div>
+        <br><br>
+    <div class="node-communication" id="node-communication">
+        <h1>Theoretical Node Communication Software</h1>
+        <p>The previous IPROs created some 
+            <a href="https://github.com/poe-iit/poe-core" target="_blank">software</a> 
+            for a theoretical network of nodes to communicate with each other in Rust. Unfortunately, none of us were that familiar with Rust
+            and we didn't have the technical knowledge or time to create a new one from scratch, however it is worth going over how this may work in theory as it is a very important
+            part of the system. To put it simply, if we were do have 10 microcontoller "nodes" in a building all with sensors and devices connected to them, we want to be able to 
+            communicate with each of those nodes and share the readings with a central server that can process all the data and use it to, for example, alert emergency services to the 
+            location of a fire based on sensor data. The nodes are all connected to a POE switch and an internet router somewhere, which allows them all to communicate, much like the Hubbell PowerHUBB nodes.
+            With a software library similar to the aforementioned one, our POE-enabled microcontrollers could communicate with each other and with a central server, sharing information
+            about the status of it's sensors. In a large-scale implementation, the status of each microcontroller's smoke sensors could be centrally analyzed to light up pathways out of a building.
+            In a more simple implementation, like the one in our 
+            <a href="#hardware-demo">hardware demo</a>
+            the nodes could each simply turn the associated hallway's LED's to red to indicate that there is danger this way. 
+        </p>
+    </div>
+    <div class="vr-demo" id="vr-demo">
+        <h1>Game Demo built in Unreal Engine utilizing procedural generation</h1>
+        <video class="ipro-demo-video" src="images/game_demo.mp4" controls></video>
+    </div>
+    <div class="hardware-demo" id="hardware-demo">
+        <h1>Hardware demo constructed to roughly visualize our idea</h1>
+        <div class="demo_images">
+            <img src="images/demo_front.jpg" alt="">
+            <img src="images/demo_top.jpg" alt="">
+            <img src="images/demo_top_left.jpg" alt="">
+        </div>
+        <div class="demo_images">
+            <img src="images/demo_top_red.PNG" alt="">
+        </div>
+        <video class="ipro-demo-video" src="images/ipro_demo_video2.mp4" controls></video>
+    </div>
+    </div>
+    
+    <div class="footer">
+        <p>IIT IPRO 497</p>
+        </div>   
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soteria</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Soteria</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">People</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/neunet.webp" id="net">
+        <img src="images/skyline.jpg" id="skyline">
+    </section>
+    <div class="about-section">
+        <h2>Our idea</h2>
+        <p><br><br>An integral component to public safety is reliable and effective emergency safety system. The most common type of public emergency safety system installed in every 
+            commercial and private building is, of course, a fire alarm system. We wanted to iterate on the concept of a simple fire alarm system and see if we could make it "smart", and 
+            this led us to exploring the idea of other kinds of "smart" security and alarm systems, primarily ones focuses on natural hazard detection and alerting (i.e. fire, water, air).
+            We decided to focus on fire since it is one of the more common & dangerous emergencies that occurs inside buildings. We wanted to create something meant to supplement current fire 
+            safety infrastructure already installed, but not replace it.<br><br>
+        </p>
+    </div>
+    <script>
+        let skyline = document.getElementById('skyline');
+
+        window.addEventListener('scroll',function(){
+            let v = window.scrollY;
+            skyline.style.top = v + 'px';
+        })
+    </script>
+</body>
+</html>

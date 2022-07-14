@@ -1,0 +1,165 @@
+body{
+    margin-top: 0;
+    background-color: #f0f0f0;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  a{
+    font-style: italic;
+    color: #444;
+  }
+  p{
+    font-family: 'Merriweather','serif';
+  }
+  .navbar{
+    padding-top: 2px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      height:4rem;
+      max-height: 10%;
+      width: 100%;
+      clear:both;
+      background-color: #f0f0f0;
+      border-bottom: black 2px solid;
+      font-family: 'Ubuntu', sans-serif;
+  }
+  .navbar h1{
+      float: left;
+      justify-content: center;
+      margin-left: 10px;
+  }
+  .navbar img{
+      float:left;
+      max-width: 100%;
+      max-height: 100%;
+  }
+  .navbar-links{
+      display: flex;
+      float: right;
+      text-decoration: none;
+      align-self: flex-end;
+      list-style-type: none;
+      justify-content: center;
+      padding-right: 80px;
+    }
+  .navbar-links a{
+      color:black;
+      text-decoration: none;
+      font-size: 14pt;
+  }
+  .navbar-links li{
+      width: 5rem;
+  }
+  .navbar-links a:hover{
+      color:lightskyblue
+  }
+
+  .sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 24px;
+    margin-left: 50px;
+  }
+
+  .openNav{
+      position: fixed;
+      left: 1%;
+      margin-top: 1%;
+      text-decoration: none;
+      color: #111;
+
+  }
+
+.wiki-container{
+    margin-right: auto;
+    width: 90%;
+    transition: margin-left .5s;
+    margin-left: 100px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.synopsis-container{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: #111 solid 1px;
+}
+.synopsis-title{
+    text-align: center;
+}
+.summary{
+    width: 85%;
+    margin: auto;
+}
+.node-communication h1{
+  text-align: center;
+}
+.node-communication{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.vr-demo h1{
+  text-align: center;
+}
+.hardware-demo h1{
+  text-align:center;
+}
+.demo_images{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.demo_images img{
+  height: 90%;
+  margin: 10px;
+  border-radius: 10px;
+}
+.ipro-demo-video{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  align-self: center;
+}
+.footer{
+  margin-top: 100px;
+  width: 100%;
+  height:50px;
+  font-size: 10pt;
+  text-align: center;
+}
+
