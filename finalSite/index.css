@@ -230,9 +230,10 @@ body{
   display: flex;
   background-color: #717171;
   margin-top: 80px;
-  margin-left: 350px;
+  margin-left: 320px;
   height: 250px;
-  width: 1200px;
+  width: 70%;
+  border-radius: 35px 50px 30px 5px;
 }
 
 .box h2{
