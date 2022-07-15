@@ -176,12 +176,12 @@ body{
 
 .about-section{
   margin-top: 6.5rem;
-  margin-left: 130px;
+  margin-left: 200px;
   display: flex;
   padding: 10px;
 }
 .fixed{
-  width: 700px;
+  width: 600px;
 }
 .flex-item{
   flex-grow: 1;
@@ -208,32 +208,7 @@ body{
   font-family: 'Merriweather', serif;
 }
 
-.about-section2{
-  width: 50%;
-  margin: auto;
-  margin-left: 2rem;
-  float: right;
-}
-
-.about-section2 h2{
-  text-align: center;
-  font-size: 30pt;
-  padding-top: 15px;
-  margin-top: 0;
-  margin-bottom: 2%;
-  color: black;
-}
-
-.about-section2 p{
-  padding-left: 2%;
-  padding-right: 1%;
-  line-height: 1.7em;
-  color: black;
-  font-size: 10.5pt;
-  font-family: 'Merriweather', serif;
-}
-
-.info_card{
+/* .info_card{
   background-color: #fff;
 	border-radius: 6px;
 	width: 200px;
@@ -289,7 +264,7 @@ body{
 .caption{
   text-align: center;
   margin-top: -5px;
-}
+} */
 .footer{
   margin-top: 100px;
   width: 100%;
