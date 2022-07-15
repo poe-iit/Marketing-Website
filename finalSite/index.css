@@ -1,7 +1,8 @@
 *{
   transition:all 0.3s ease-in-out;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Fjord One', serif;
 }
+
 a{
   font-style: italic;
   color: #444;
@@ -67,14 +68,23 @@ body{
     border-radius: 1px;
     /* border-bottom: black 4px solid; */
   }
-  .line{
-    width: 80%;
-    margin-left: 200px;
-    padding: 0;
-    position: relative;
-    border-radius: 1px;
-    border-bottom: gray 4px solid;
-  }
+  
+.line{
+  width: 68%;
+  margin-left: 320px;
+  padding: 0;
+  position: relative;
+  border-radius: 1px;
+  border-bottom: gray 4px solid;
+}
+
+.centerDiv{
+  width: 68%;
+  margin-left: 320px;
+  border-radius: 10px;
+  padding-bottom: 40px;
+}
+
   /* Hide the images by default */
   .mySlides {
     display: none;
@@ -176,12 +186,13 @@ body{
 
 .about-section{
   margin-top: 6.5rem;
-  margin-left: 200px;
+  margin-left: 320px;
   display: flex;
   padding: 10px;
+  width: 70%;
 }
 .fixed{
-  width: 600px;
+  width: 400px;
 }
 .flex-item{
   flex-grow: 1;
@@ -192,20 +203,24 @@ body{
 
 .about-section h2{
   text-align: center;
-  font-size: 30pt;
+  font-size: 35pt;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-family: "quicksandbold", serif;
   padding-top: 15px;
+  padding-right: 30px;
   margin-top: 0;
   margin-bottom: 2%;
   color: black;
 }
 
 .about-section p{
-  padding-left: 2%;
   padding-right: 1%;
-  line-height: 1.7em;
+  padding-bottom: 5rem;
+  line-height: 2.0em;
   color: black;
-  font-size: 10.5pt;
-  font-family: 'Merriweather', serif;
+  font-size: 13.5pt;
+  letter-spacing: 0.02ch;
 }
 
 /* .info_card{
