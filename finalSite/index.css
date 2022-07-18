@@ -3,10 +3,6 @@
   font-family: 'Fjord One', serif;
 }
 
-a{
-  font-family: "morgunscondensed", serif;
-}
-
 body{
   background-color: white;
   margin-top: 0;
@@ -50,7 +46,7 @@ body{
 .navbar-links a{
     color:black;
     text-decoration: none;
-    font-family: "hyperjumpbold", serif;
+    font-family: "Fjord", serif;
     font-size: 15pt;
     letter-spacing: 0.1ch;
 }
@@ -59,7 +55,7 @@ body{
     width: 5.8rem;
 }
 .navbar-links a:hover{
-    color:lightskyblue
+    color:rgb(0, 155, 90)
 }
 
 /* Slideshow container */
@@ -75,7 +71,7 @@ body{
   
 .line{
   width: 68%;
-  margin-left: 320px;
+  margin-left: 17%;
   padding: 0;
   position: relative;
   border-radius: 1px;
@@ -189,20 +185,18 @@ body{
   }
 
 .about-section{
-  margin-top: 6.5rem;
+  margin-top: 4%;
   margin-left: 17%;
   display: flex;
   padding: 10px;
   width: 70%;
 }
 .fixed{
-  width: 400px;
+  /* width: 400px; */
+  width: 30%;
 }
 .flex-item{
   flex-grow: 1;
-}
-.images{
-  height: 500px;
 }
 
 .about-section h2{
@@ -212,8 +206,8 @@ body{
   font-weight: bold;
   font-family: "clovedoperregular", serif;
   letter-spacing: 0.20ch;
-  padding-top: 15px;
-  margin-bottom: 10%;
+  padding-top: 7%;
+  margin-bottom: 3%;
   color: rgb(100,100,100)
 }
 
@@ -230,7 +224,7 @@ body{
   display: flex;
   background-color: #717171;
   margin-top: 80px;
-  margin-left: 320px;
+  margin-left: 17%;
   height: 250px;
   width: 70%;
   border-radius: 35px 50px 30px 5px;
