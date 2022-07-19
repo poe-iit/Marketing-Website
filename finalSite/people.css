@@ -1,6 +1,7 @@
 body{
     margin-top: 0;
     background-color: #f0f0f0;
+    font-family: 'Fjord One', serif;
 }
 
 a{
@@ -119,4 +120,3 @@ a{
     font-size: 10pt;
     text-align: center;
   }
-  
