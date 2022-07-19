@@ -1,5 +1,5 @@
 *{
-  transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-family: 'Fjord One', serif;
 }
 
@@ -63,7 +63,7 @@ body{
     position: relative;
     margin: auto;
     width: auto;
-    height: 30em;
+    height: 50rem;
     padding: 0;
     border-radius: 1px;
     /* border-bottom: black 4px solid; */
@@ -82,19 +82,19 @@ body{
   width: 68%;
   margin-left: 17%;
   border-radius: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
   /* Hide the images by default */
   .mySlides {
     display: none;
     width: 100%;
-    height: 30rem;
+    height: 50rem;
   }
 
   .mySlides img{
-    max-width:100%;
-    max-height:100%;
+    max-width: 100%;
+    max-height: 100%;
     height: auto;
     width:auto;
   }
@@ -185,7 +185,7 @@ body{
   }
 
 .about-section{
-  margin-top: 4%;
+  margin-top: 3%;
   margin-left: 17%;
   display: flex;
   padding: 10px;
@@ -206,7 +206,7 @@ body{
   font-weight: bold;
   font-family: "clovedoperregular", serif;
   letter-spacing: 0.20ch;
-  padding-top: 7%;
+  padding-top: 3%;
   margin-bottom: 3%;
   color: rgb(100,100,100)
 }
@@ -232,13 +232,14 @@ body{
 
 .box h2{
   width: 70%;
-  font-size: 20px;
+  font-size: 35px;
   line-height: 3ch;
   margin-left: 60px;
 }
 
 .box p{
   margin-top: 190px;
+  font-style: italic;
 }
 
 .footer{
