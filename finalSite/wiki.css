@@ -1,10 +1,11 @@
 body{
     margin-top: 0;
     background-color: #f0f0f0;
-    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Fjord One', serif;
   }
   a{
-    font-style: italic;
+    
     color: #444;
   }
   p{
@@ -21,7 +22,7 @@ body{
       clear:both;
       background-color: #f0f0f0;
       border-bottom: black 2px solid;
-      font-family: 'Ubuntu', sans-serif;
+      transition: all 0.3s ease-in-out;
   }
   .navbar h1{
       float: left;
@@ -115,25 +116,25 @@ body{
 }
 .synopsis-title{
     text-align: center;
+    font-size: 28pt;
+    margin-bottom: 30px;
+}
+.synopsis-container h2{
+  text-align: center;
+  font-size: 28pt;
+}
+.synopsis-container ul{
+  text-align: left;
+  font-size: 16pt;
+  margin-left: 5%;
 }
 .summary{
     width: 85%;
     margin: auto;
 }
-.node-communication h1{
-  text-align: center;
-}
-.node-communication{
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-}
-.vr-demo h1{
-  text-align: center;
-}
 .hardware-demo h1{
   text-align:center;
+  font-size: 36pt;
 }
 .demo_images{
   height: 400px;
@@ -167,6 +168,7 @@ body{
   height: auto;
   display: flex;
   margin: auto;
+  justify-content: center;
 }
 .col1{
   display: flex;
@@ -177,7 +179,24 @@ body{
   flex-direction: column;
 }
 .images-container img{
-  width: 35vw;
-  margin: 50px;
+  width: 30vw;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 3px;
+  box-shadow: #444 4px 4px;
+  transition: ease-in-out .25s;
+}
+.images-container img:hover{
+  border-radius: 5px;
+  box-shadow: #111 5px 5px;
+}
+.video-demo{
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: block
 }
 

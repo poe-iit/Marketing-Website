@@ -58,6 +58,22 @@
             <p>The MQ-2 Semiconductor sensor can detect smoke, alcohol, propane, hydrogen, methane, and carbon monoxide. It operates by essentially changing its resistance (qualitative measurement) 
             when its sensing material interacts with certain gasses. 
             </p>
+        <h1>YG1006 Flame Sensor</h1>
+            <p>This flame sensor is a 5mm IR diode that detects fire source or other sources of light in the range of 760-1100 nm.
+                it reports a digital value of 0 if a flame is detected, and 1 if no flame/light source is detected.
+            </p>
+        <h1>AM412 PIR Motion Sensor</h1>
+        <p>
+            The motion sensor modules report a digital value of 1 if any motion is deteched within a conical region in fron of the sensor unit.
+        </p>
+        <h1>DHT22 Humidity and Temperature Sensor</h1>
+        <p>This sensor module measures temperature as well as humidity via a digital pin. We used an Adafruit C++ libarary to easily program the module.</p>
+        <h1>Water Sensors</h1>
+        <p>These water sensors report an analog value but are functionally used as an "on" or "off" value. The sensor consists of a lightly biased transistors that make contact when water gets on the PCB</p>
+        <h1>7 inch Raspberry Pi touchscreen in 3D printed case.</h1>
+            <p>This touchscreen and enclosure for it house the Raspberry Pi and act as the main "terminal" through which people interact
+                with the UI we created. It is powered and can communicate on a network via an ethernet port on the back.
+            </p>
         <h1>MCP3008 Analog-digital converter</h1>
             <p>
             This integrated circuit converts the analog signal from the MQ-2 smoke into digital signals that can be read by the raspberry pi, as it does not have an ADC built in. 
@@ -66,6 +82,7 @@
         <p>These splitters take a PoE enabled cable at it’s input and splits into two outputs; a male RJ45 (ethernet) connector as its first output, and either a 5v MicroUSB or 5v Barrel connector as its second power output. This 5V from the Barrel
             The MicroUSB variety are used for power devices like the Raspberry Pis, while the barrel output is used alongside the DC power jack adapters to provide a power terminal for less sophisticated components. 
         </p>
+
         
         <div id="synopsis-container" class="synopsis-container">
             <h1 class="synopsis-title"> Soteria POE Smart Alarm System Synopsis:</h1>
@@ -84,8 +101,34 @@
             that runs on the Raspberry Pi. This web application provinces a visual interface with which a registered user can monitor the readings coming from the sensors. The prototype is mainly a high level representation 
             of what a system like this could look like. The concept and prototype are intended to be a starting point for further development by future semesters. There are many improvements and additions that can be made. 
             </p>
+            <br><br>
+            <h2>The SOTERIA system concept</h2>
+            <ul>
+                <li>Network of microcontroller devices (arduinos) with various sensors that can communicate with a microcomputer (Pi)</li>
+                <li>Allows for data collection and analysis</li>
+                <li>Provides more granular information and allows for a more appropriate and swift response</li>
+                <li>Opens up possibilities for automation and more</li>
+            </ul>
+            <h2>Our prototype implementation</h2>
+            <ul>
+                <li>We use a microcontroller connected to 22 different sensors to collect data and send it to a raspberry pi using I2C protocol (future replace with TCP/UDP communication)</li>
+                <li>A raspberry pi collects and updates the sensor readings in a database</li>
+                <li>Django web application connects to this database and displays it in a convenient way. (lots of room for new ideas here)</li>
+                <li>Arduino is programmed using C++ to be lightweight, fast and stable</li>
+                <li>Raspberry Pi script and Django web app are programmed using Python for ease of use and their vast array of libraries</li>
+            </ul>
+            <h2>Future additions (where to take the project?)</h2>
+            <ul>
+                <li>(Hardware/software) Implement the ability for the Arduino to communicate with the Raspberry Pi using the Ethernet Shield and TCP/UDP. You could also add PoE capabilities to the shield using a module like <a href="https://www.arduino.cc/en/uploads/Main/PoE-datasheet.pdf" target="_blank">this</a></li>
+                <li>Improve the way that data is collected (current implementation is very basic)</li>
+                <li>(Software) Improve and implement new features into the web application to send different kinds of email or sms notifications, track events, etc. Update the U/I to look cleaner, and/or create a whole new UI/UX. </li>
+                <li>Implement sirens using Piezo buzzers</li>
+                <li>Implement some kind of LED indicator above doors to indicate safe passage.</li>
+                <li>Find better way to implement RGB floor lights idea from spring 22(?)</li>
+                <li>Different Automations (automated sprinkers,door locks, speaker warning system)</li>
+
+            </ul>
         </div>
-        <br><br>
     <div class="hardware-demo" id="hardware-demo">
         <h1>Hardware demo constructed to roughly visualize our idea</h1>
         <div class="images-container">
@@ -102,10 +145,15 @@
                 <img src="images/prototype_images/img10.jpg" alt="">
             </div>
         </div>
+        <h1>Video Demo of Soteria Web Application</h1>
+        <video controls class = "video-demo" src="videos/video_demo1.mp4"></video>
     </div>
-    
     <div class="footer">
-        <p>IIT IPRO 497</p>
-        </div>   
+        <p>Illinois Institute of Technology, IPRO 497-211 Summer 2022 Class<br><br>
+        
+            The Interprofessional Project Course,<br>
+            Power over Ethernet to Improve Lighting Efficiency<br>
+            Instructor: Dr Dan Tomal</p>
+        </div> 
 </body>
 </html>
