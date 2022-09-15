@@ -2,14 +2,14 @@ body{
     margin-top: 0;
     background-color: #f0f0f0;
     transition: all 0.3s ease-in-out;
-    font-family: 'Fjord One', serif;
+    font-family: 'serif';
   }
   a{
     
     color: #444;
   }
   p{
-    font-family: 'Merriweather','serif';
+    font-family: 'serif';
   }
   .navbar{
     padding-top: 2px;
