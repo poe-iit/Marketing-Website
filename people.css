@@ -72,8 +72,8 @@ body{
     border-bottom: 2px solid black;
 }
 .container img{
-    height: 100%;
-    width: 100%;
+    height: 175px;
+    width: 175px;
     border-radius: 50%;
     border: #F6A222 4px solid;
 }

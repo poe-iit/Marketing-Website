@@ -5,9 +5,13 @@
 
 body{
   background-color: white;
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
+
+* {box-sizing:border-box}
+
 
 .navbar{
   padding-top: 2px;
@@ -60,15 +64,31 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
-    position: relative;
-    margin: auto;
-    width: auto;
-    height: 40rem;
-    padding: 0;
-    border-radius: 1px;
-    /* border-bottom: black 4px solid; */
-  }
-  
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+ .slidershow{
+  display: block;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: center;
+ }
+ 
+
+
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+
 .line{
   width: 68%;
   margin-left: 17%;
@@ -88,16 +108,24 @@ body{
   /* Hide the images by default */
   .mySlides {
     display: none;
-    width: 100%;
-    height: 55rem;
   }
+  
+  #container
+{
+  width:  100vw; /*or 70%, or what you want*/
+  height: 600px; /*or 70%, or what you want*/
+  /* max-height: 600px; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  .mySlides img{
-    max-width: 100%;
+  /* .mySlides img{
+    min-width: 100%;
     max-height: 100%;
     height: auto;
     width:auto;
-  }
+  } */
   
   /* Next & previous buttons */
   .prev, .next {
@@ -114,12 +142,13 @@ body{
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
-  
+    
   /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
+  
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
@@ -186,17 +215,24 @@ body{
 
 .about-section{
   margin-top: 3%;
-  margin-left: 17%;
+  /* margin-left: 17%; */
   display: flex;
   padding: 10px;
-  width: 70%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+
 }
 .fixed{
   /* width: 400px; */
-  width: 30%;
+  width: 40%;
+
 }
 .flex-item{
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .about-section h2{
